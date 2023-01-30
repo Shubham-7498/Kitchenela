@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <title>Kitchenela</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('E36Ej5dGPHgnhCBm4');
+        })();
+    </script>
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <div class="left">
+                    <a href="index.html" class="logo">
+                        <img src="logo.png" alt="logo">
+                    </a>
+                </div>
+                <div class="right">
+                    <div class="menu-buttons">
+                        <ul>
+                            <li class="menu-item active"><a href="#home">Home</a></li>
+                            <li class="menu-item"><a href="#about">About</a></li>
+                            <li class="menu-item"><a href="#menu">Menu</a></li>
+                            <li class="menu-item"><a href="#gallery">Gallery</a></li>
+                            <li class="menu-item"><a href="#blog">Blog</a></li>
+                            <li class="menu-item"><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="menu-icons">
+                        <div class="search-bar">
+                            <input type="text" placeholder="Search Here....">
+                            <i class="uil uil-search"></i>
+                        </div>
+                        <button class="cart-icon">
+                            <i class="uil uil-shopping-cart-alt"></i>
+                            <div class="notification-no">
+                                <span>3</span>
+                            </div>
+                        </button>
+                        <button>
+                            <i class="uil uil-user"></i>
+                        </button>
+                    </div>
+                </div>
+        </nav>
+    </header>
+    <main>
+        <section class="hero" id="home">
+            <div class="background-image">
+                <div class="image"><img src="./assets/Images/berry.png" alt="berry" class="berry"></div>
+                <div class="image"><img src="./assets/Images/leaf.png" alt="leaf" class="leaf"></div>
+            </div>
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="hero-left">
+                        <h1 class="text-bold">Welcome To Our <span class="text-orange">India</span> Resturant</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero minus, qui asperiores
+                            consectetur esse delectus pariatur nulla assumenda facilis eligendi doloremque voluptate!
+                        </p>
+                        <button>Check Our Menu</button>
+                    </div>
+                    <div class="hero-right">
+                        <div class="blob-img">
+                            <div class="blob"></div>
+                        </div>
+                        <span>Sushi</span>
+                        <p>lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, fuga?</p>
+                        <p>eligendi doloremque voluptate!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="partners">
+            <h3>TRUSTED BY 70+ COMPANIES</h3>
+            <div class="brands">
+                <img src="./assets/Images/brands/b1.png" alt="">
+                <img src="./assets/Images/brands/b2.png" alt="">
+                <img src="./assets/Images/brands/b3.png" alt="">
+                <img src="./assets/Images/brands/b4.png" alt="">
+                <img src="./assets/Images/brands/b5.png" alt="">
+            </div>
+        </section>
+        <section class="about" id="about">
+            <button>ABOUT US</button>
+            <h1>Discover Our</h1>
+            <h2>Restaurant Story</h2>
+            <span><img src="./assets/Images/title-shape.svg" alt=""></span>
+            <p>"This is Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe dolore at aspernatur eveniet
+                temporibus placeat voluptatum quaerat accusamus possimus
+                cupiditate, quidem impedit sed libero id perspiciatis esse earum repellat quam. Dolore modi temporibus
+                quae possimus accusantium, cum corrupti sed deserunt iusto at sapiente nihil sint iste similique soluta
+                dolor! Quod."</p>
+            <div class="about-img">
+                <img src="./assets/Images/about.jpg" alt="">
+            </div>
+            <div class="play-button">
+                <i class="uil uil-play" onclick="toggle();"></i>
+                <span>Watch The Recipe</span>
+            </div>
+            <div class="recipe">
+                <video src="./assets/Images/video.mp4" controls="true"></video>
+                <span class="close" onclick="toggle();"><i class="uil uil-multiply"></i></span>
+            </div>
+        </section>
+        <section class="menu" id="menu">
+            <button>OUR MENU</button>
+            <h1>Start Your Day With Us,</h1>
+            <h2>Eat Fresh & Healthy</h2>
+            <span><img src="./assets/Images/title-shape.svg" alt=""></span>
+            <div class="menuitems">
+                <div class="category">
+                    <div class="category-item active" onclick="filterSelection('all')">
+                        <img src="./assets/Images/menu-1.png" alt="">
+                        <h3>All</h3>
+                    </div>
+                    <div class="category-item" onclick="filterSelection('breakfast')">
+                        <img src="./assets/Images/menu-2.png" alt="">
+                        <h3>Breakfast</h3>
+                    </div>
+                    <div class="category-item" onclick="filterSelection('lunch')">
+                        <img src="./assets/Images/menu-3.png" alt="">
+                        <h3>Lunch</h3>
+                    </div>
+                    <div class="category-item" onclick="filterSelection('dinner')">
+                        <img src="./assets/Images/menu-4.png" alt="">
+                        <h3>Dinner</h3>
+                    </div>
+                </div>
+                <div class="products">
+                    <div class="product-item">
+                        <div class="dish-img">
+                            <img src="./assets/Images/dish/1.png" alt="">
+                        </div>
+                        <div class="star">5<i class="uil uil-star"></i></div>
+                        <h3>Fresh Chicken Veggies</h3>
+                        <span>120 calories</span>
+                        <div class="details">
+                            <div class="type">
+                                <h4>Type</h4>
+                                <h5>Non Veg</h5>
+                            </div>
+                            <span></span>
+                            <div class="people">
+                                <h4>Persons</h4>
+                                <h5>2</h5>
+                            </div>
+                        </div>
+                        <span class="line"></span>
+                        <div class="price">
+                            <h2>Rs.499</h2>
+                            <button><i class="uil uil-plus"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <div class="dish-img">
+                            <img src="./assets/Images/dish/2.png" alt="">
+                        </div>
+                        <div class="star">4.3<i class="uil uil-star"></i></div>
+                        <h3>Grilled Chicken</h3>
+                        <span>80 calories</span>
+                        <div class="details">
+                            <div class="type">
+                                <h4>Type</h4>
+                                <h5>Non Veg</h5>
+                            </div>
+                            <span></span>
+                            <div class="people">
+                                <h4>Persons</h4>
+                                <h5>1</h5>
+                            </div>
+                        </div>
+                        <span class="line"></span>
+                        <div class="price">
+                            <h2>Rs.359</h2>
+                            <button><i class="uil uil-plus"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <div class="dish-img">
+                            <img src="./assets/Images/dish/3.png" alt="">
+                        </div>
+                        <div class="star">4<i class="uil uil-star"></i></div>
+                        <h3>Penner Noodles</h3>
+                        <span>100 calories</span>
+                        <div class="details">
+                            <div class="type">
+                                <h4>Type</h4>
+                                <h5>Veg</h5>
+                            </div>
+                            <span></span>
+                            <div class="people">
+                                <h4>Persons</h4>
+                                <h5>2</h5>
+                            </div>
+                        </div>
+                        <span class="line"></span>
+                        <div class="price">
+                            <h2>Rs.149</h2>
+                            <button><i class="uil uil-plus"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <div class="dish-img">
+                            <img src="./assets/Images/dish/4.png" alt="">
+                        </div>
+                        <div class="star">4.5<i class="uil uil-star"></i></div>
+                        <h3>Chicken Noodles</h3>
+                        <span>120 calories</span>
+                        <div class="details">
+                            <div class="type">
+                                <h4>Type</h4>
+                                <h5>Non Veg</h5>
+                            </div>
+                            <span></span>
+                            <div class="people">
+                                <h4>Persons</h4>
+                                <h5>2</h5>
+                            </div>
+                        </div>
+                        <span class="line"></span>
+                        <div class="price">
+                            <h2>Rs.379</h2>
+                            <button><i class="uil uil-plus"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <div class="dish-img">
+                            <img src="./assets/Images/dish/5.png" alt="">
+                        </div>
+                        <div class="star">5<i class="uil uil-star"></i></div>
+                        <h3>Bread Boiled Egg</h3>
+                        <span>120 calories</span>
+                        <div class="details">
+                            <div class="type">
+                                <h4>Type</h4>
+                                <h5>Non Veg</h5>
+                            </div>
+                            <span></span>
+                            <div class="people">
+                                <h4>Persons</h4>
+                                <h5>2</h5>
+                            </div>
+                        </div>
+                        <span class="line"></span>
+                        <div class="price">
+                            <h2>Rs.99</h2>
+                            <button><i class="uil uil-plus"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <div class="dish-img">
+                            <img src="./assets/Images/dish/6.png" alt="">
+                        </div>
+                        <div class="star">5<i class="uil uil-star"></i></div>
+                        <h3>Immunity Dish</h3>
+                        <span>120 calories</span>
+                        <div class="details">
+                            <div class="type">
+                                <h4>Type</h4>
+                                <h5>Veg</h5>
+                            </div>
+                            <span></span>
+                            <div class="people">
+                                <h4>Persons</h4>
+                                <h5>2</h5>
+                            </div>
+                        </div>
+                        <span class="line"></span>
+                        <div class="price">
+                            <h2>Rs.159</h2>
+                            <button><i class="uil uil-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="items">
+            <div class="container">
+                <div class="item">
+                    <div class="img"><img src="./assets/Images/pizza.png" alt=""></div>
+                    <div class="para">
+                        <h1>Pizza</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis molestias culpa ipsa, alias
+                            impedit cumque error nulla laborum libero exercitationem nam a quo dolorem amet magni sed
+                            cum quae, numquam illum. Molestiae, nesciunt dolorum libero dolor nam harum facilis maiores
+                            dignissimos incidunt vel aut, officia magni aspernatur, adipisci voluptatibus animi aliquid.
+                            Modi blanditiis porro facilis rerum molestiae beatae id consequuntur!</p>
+                        <p class="small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex odio eveniet
+                            maiores quas repudiandae! Explicabo, sed, enim, laboriosam voluptates ratione minus vitae
+                            pariatur ex facere et iure impedit veritatis rerum?</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="para">
+                        <h1>Chicken Pepperoni</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis molestias culpa ipsa, alias
+                            impedit cumque error nulla laborum libero exercitationem nam a quo dolorem amet magni sed
+                            cum quae, numquam illum. Molestiae, nesciunt dolorum libero dolor nam harum facilis maiores
+                            dignissimos incidunt vel aut, officia magni aspernatur, adipisci voluptatibus animi aliquid.
+                            Modi blanditiis porro facilis rerum molestiae beatae id consequuntur!</p>
+                        <p class="small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex odio eveniet
+                            maiores quas repudiandae! Explicabo, sed, enim, laboriosam voluptates ratione minus vitae
+                            pariatur ex facere et iure impedit veritatis rerum?</p>
+                    </div>
+                    <div class="img"><img src="./assets/Images/sushi.png" alt=""></div>
+                </div>
+            </div>
+        </section>
+        <section class="booking">
+            <div class="bg-img">
+                <img src="./assets/Images/table-leaves-shape.png" alt="">
+            </div>
+            <div class="bg-img2">
+                <img src="./assets/Images/table-leaves-shape.png" alt="">
+            </div>
+            <button>BOOK TABLE</button>
+            <h1>Opening Table</h1>
+            <span><img src="./assets/Images/title-shape.svg" alt=""></span>
+            <div class="info">
+                <div class="time">
+                    <h3>Monday TO Thrusday</h3>
+                    <h5>9:00 AM - 22:00 PM</h5>
+                </div>
+                <span class="line">...............................</span>
+                <div class="call">
+                    <i class="uil uil-phone"></i>
+                    <h3><i class="uil uil-plus"></i>91 - 9988776655</h3>
+                </div>
+                <span class="line">...............................</span>
+                <div class="time">
+                    <h3>Friday TO Sunday</h3>
+                    <h5>11:00 AM - 20:00 PM</h5>
+                </div>
+            </div>
+        </section>
+        <section class="slider1 slider" id="gallery">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="./assets/Images/bt1.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./assets/Images/bt2.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./assets/Images/bt3.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./assets/Images/bt4.jpg" />
+                    </div>
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-pagination"></div>
+        </section>
+        <section class="team">
+            <button>OUR TEAM</button>
+            <h1>Meet Our Chefs</h1>
+            <span><img src="./assets/Images/title-shape.svg" alt=""></span>
+            <section class="slider">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="img"><img src="./assets/Images/chef/c1.jpg" alt=""></div>
+                            <h2>Navnit Kumar</h2>
+                            <div class="icon">
+                                <i class="uil uil-facebook-f"></i>
+                                <i class="uil uil-twitter-alt"></i>
+                                <i class="uil uil-instagram"></i>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img"><img src="./assets/Images/chef/c2.jpg" alt=""></div>
+                            <h2>Pranav Badgal</h2>
+                            <div class="icon">
+                                <i class="uil uil-facebook-f"></i>
+                                <i class="uil uil-twitter-alt"></i>
+                                <i class="uil uil-instagram"></i>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img"><img src="./assets/Images/chef/c3.jpg" alt=""></div>
+                            <h2>Priyotosh Dey</h2>
+                            <div class="icon">
+                                <i class="uil uil-facebook-f"></i>
+                                <i class="uil uil-twitter-alt"></i>
+                                <i class="uil uil-instagram"></i>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img"><img src="./assets/Images/chef/c4.jpg" alt=""></div>
+                            <h2>Nilay Hirpara</h2>
+                            <div class="icon">
+                                <i class="uil uil-facebook-f"></i>
+                                <i class="uil uil-twitter-alt"></i>
+                                <i class="uil uil-instagram"></i>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img"><img src="./assets/Images/chef/c5.jpg" alt=""></div>
+                            <h2>Ravi Kumawat</h2>
+                            <div class="icon">
+                                <i class="uil uil-facebook-f"></i>
+                                <i class="uil uil-twitter-alt"></i>
+                                <i class="uil uil-instagram"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <section class="reviews">
+            <button>OUR TEAM</button>
+            <h1>Meet Our Chefs</h1>
+            <span><img src="./assets/Images/title-shape.svg" alt=""></span>
+            <div class="content">
+                <div class="testimonial">
+                    <img src="./assets/Images/testimonial-img.png" alt="">
+                </div>
+                <div class="infoo">
+                    <div class="review">
+                        <div class="imgg"><img src="./assets/Images/testimonials/t1.jpg" alt=""></div>
+                        <span>
+                            <i class="uil uil-star"></i>
+                            <i class="uil uil-star"></i>
+                            <i class="uil uil-star"></i>
+                            <i class="uil uil-star"></i>
+                            <i class="uil uil-star"></i>
+                        </span>
+                        <h3>Raashi Khanna</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, officiis?</p>
+                    </div>
+                    <div class="review">
+                        <div class="imgg"><img src="./assets/Images/testimonials/t2.jpg" alt=""></div>
+                        <span>
+                            <i class="uil uil-star"></i>
+                            <i class="uil uil-star"></i>
+                            <i class="uil uil-star"></i>
+                            <i class="uil uil-star"></i>
+                            <i class="uil uil-star"></i>
+                        </span>
+                        <h3>Raashi Khanna</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, officiis?</p>
+                    </div>
+                    <div class="review">
+                        <div class="imgg"><img src="./assets/Images/testimonials/t3.jpg" alt=""></div>
+                        <span>
+                            <i class="uil uil-star"></i>
+                            <i class="uil uil-star"></i>
+                            <i class="uil uil-star"></i>
+                            <i class="uil uil-star"></i>
+                            <i class="uil uil-star"></i>
+                        </span>
+                        <h3>Raashi Khanna</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, officiis?</p>
+                    </div>
+                    <div class="review">
+                        <div class="imgg"><img src="./assets/Images/testimonials/t4.jpg" alt=""></div>
+                        <span>
+                            <i class="uil uil-star"></i>
+                            <i class="uil uil-star"></i>
+                            <i class="uil uil-star"></i>
+                            <i class="uil uil-star"></i>
+                            <i class="uil uil-star"></i>
+                        </span>
+                        <h3>Raashi Khanna</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, officiis?</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="faqs">
+            <button>OUR TEAM</button>
+            <h1>Frequently</h1>
+            <h2>Asked Questions</h2>
+            <span><img src="./assets/Images/title-shape.svg" alt=""></span>
+            <div class="questions">
+                <div class="box">
+                    <h4>
+                        What Are The Login Hours?
+                    </h4>
+                    <p>
+                        It is Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus ipsum vitae fugit
+                        laboriosam dolor distinctio.
+                    </p>
+                </div>
+                <div class="box">
+                    <h4>
+                        How Long It Will Take Food To Arrive?
+                    </h4>
+                    <p>
+                        It is Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus ipsum vitae fugit
+                        laboriosam dolor distinctio.
+                        It is Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus ipsum vitae fugit
+                        laboriosam dolor distinctio.
+                        It is Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    </p>
+                </div>
+                <div class="box">
+                    <h4>
+                        What Is Cost Of Food Delivery?
+                    </h4>
+                    <p>
+                        It is Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus ipsum vitae fugit
+                        laboriosam dolor distinctio.
+                        It is Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus ipsum vitae fugit
+                        laboriosam dolor distinctio.
+                    </p>
+                </div>
+                <div class="box">
+                    <h4>
+                        Does Your Restaurant Has Both Veg And Non Veg?
+                    </h4>
+                    <p>
+                        It is Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus ipsum vitae fugit
+                        laboriosam dolor distinctio. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                </div>
+                <div class="box">
+                    <h4>
+                        What Do I Get My Refund?
+                    </h4>
+                    <p>
+                        It is Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus ipsum vitae fugit
+                        laboriosam dolor distinctio.
+                        It is Lorem ipsum dolor, sit amet consectetur adipisicing elit.It is Lorem ipsum dolor, sit amet
+                        consectetur adipisicing elit. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam.
+                    </p>
+                </div>
+                <div class="box">
+                    <h4>
+                        Who Is Eligible For Pro Membership?
+                    </h4>
+                    <p>
+                        It is Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus ipsum vitae fugit
+                        laboriosam dolor distinctio. Lorem ipsum dolor sit amet consectetur.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="ourblog" id="blog">
+            <button>OUR TEAM</button>
+            <h1>Latest Publications</h1>
+            <span><img src="./assets/Images/title-shape.svg" alt=""></span>
+            <div class="container">
+                <div class="publication">
+                    <div>
+                        <div class="blog-img"><img src="./assets/Images/blog/blog1.jpg" alt=""></div>
+                        <span>September.15.2021</span>
+                        <h3>Energy DrinkWhich Can You Make At Home.</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur ipsa explicabo atque
+                            reprehenderit beatae! Accusantium soluta consequuntur blanditiis amet ad.</p>
+                        <button>Read More</button>
+                    </div>
+                </div>
+                <div class="publication">
+                    <div>
+                        <div class="blog-img"><img src="./assets/Images/blog/blog1.jpg" alt=""></div>
+                        <span>September.15.2021</span>
+                        <h3>Energy DrinkWhich Can You Make At Home.</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur ipsa explicabo atque
+                            reprehenderit beatae! Accusantium soluta consequuntur blanditiis amet ad.</p>
+                        <button>Read More</button>
+                    </div>
+                </div>
+                <div class="publication">
+                    <div>
+                        <div class="blog-img"><img src="./assets/Images/blog/blog1.jpg" alt=""></div>
+                        <span>September.15.2021</span>
+                        <h3>Energy DrinkWhich Can You Make At Home.</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur ipsa explicabo atque
+                            reprehenderit beatae! Accusantium soluta consequuntur blanditiis amet ad.</p>
+                        <button>Read More</button>
+                    </div>
+                </div>
+            </div>
+            <div class="email" id="contact">
+                <h1>Subscribe Our Newsletter</h1>
+                <span>This is Lorem ipsum dolor sit amet consectetur adipisicing elit ad veritatis.</span>
+                <div class="email-input">
+                    <input id="email_id" type="email" placeholder="Enter Your Email" required>
+                    <button onclick="SendMail()">Subscribe</button>
+                </div>
+            </div>
+            <div class="popup">
+                <div class="pop-alert" id="alert">
+                    Thank You For Subscribing
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="footer">
+                <div class="container">
+                    <div class="footer-logo">
+                        <img src="./logo.png" alt="">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda fugiat ab unde porro at
+                            velit.</p>
+                        <div class="social-links">
+                            <span><i class="uil uil-facebook-f"></i></span>
+                            <span><i class="uil uil-twitter-alt"></i></span>
+                            <span><i class="uil uil-instagram"></i></span>
+                            <span><i class="uil uil-youtube"></i></span>
+                            <span><i class="uil uil-linkedin-alt"></i></span>
+                        </div>
+                    </div>
+                    <div class="footer-timing">
+                        <h3>Opening Hours</h3>
+                        <div class="timing">
+                            <i class="uil uil-clock"></i>
+                            <span class="day">Monday - Friday :</span>
+                            <span class="time">9:00 AM - 10:00 PM</span>
+                        </div>
+                        <div class="timing">
+                            <i class="uil uil-clock"></i>
+                            <span class="day">Saturday :</span>
+                            <span class="time">9:00 AM - 22:00 PM</span>
+                        </div>
+                        <div class="timing">
+                            <i class="uil uil-clock"></i>
+                            <span class="day">Sunday :</span>
+                            <span class="time">11:00 AM - 22:00 PM</span>
+                        </div>
+                    </div>
+                    <div class="footer-links">
+                        <h3>Quick Links</h3>
+                        <ul class="links">
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#menu">Menu</a></li>
+                            <li><a href="#gallery">Gallery</a></li>
+                            <li><a href="#blog">Blog</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-contact">
+                        <h3>Contact Us</h3>
+                        <div class="contact">
+                            <i class="uil uil-map-marker"></i>
+                            <span class="day">Address :</span>
+                            <span class="time">123 Street, New York, USA</span>
+                        </div>
+                        <div class="contact">
+                            <i class="uil uil-phone"></i>
+                            <span class="day">Phone :</span>
+                            <span class="time">+1 123 456 7890</span>
+                        </div>
+                        <div class="contact">
+                            <i class="uil uil-envelope"></i>
+                            <span class="day">Email :</span>
+                            <span>
+                                <a class="time" href="#">abc@gmail.com </a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
